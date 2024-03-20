@@ -1,1 +1,19 @@
-SELECT * FROM public.nba_info where rang = %s and ligue_ses = %s and conference = %s and equipe = %s and ligue = %s and saison = %s and pays = %s and pays_code = %s and match_joue =%s and match_win = %s and match_percentage_win = %s and match_lose = %s and match_percentage_lose = %s, (row['rang'], row['ligue_ses'],row['conference'], row['equipe'], row['ligue'],row['saison'], row['pays'], row['pays_code'],row['match_joue'], row['match_win'],row['match_percentage_win'],row['match_lose'],row['match_percentage_lose'])
+SELECT
+    *
+FROM
+    PUBLIC.nba_info
+WHERE
+    rang =%s
+    AND ligue_ses =%s
+    AND conference =%s
+    AND equipe =%s
+    AND ligue =%s
+    AND saison =%s
+    AND pays =%s
+    AND pays_code =%s
+    AND match_joue =%s
+    AND match_win =%s
+    AND match_percentage_win =%s
+    AND match_lose =%s
+    AND match_percentage_lose =%s
+
