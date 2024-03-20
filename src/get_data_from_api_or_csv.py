@@ -1,7 +1,9 @@
 import json
+
 import pandas as pd
 import requests
-from config import URL, HEADERS
+
+from config import HEADERS, URL
 
 output_data = []
 

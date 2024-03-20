@@ -1,5 +1,7 @@
-import pandas as pd
 import glob as gb
+
+import pandas as pd
+
 from config import Paths
 
 path = Paths()

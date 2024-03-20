@@ -1,16 +1,16 @@
 import csv
-import json
 import glob as g
+import json
 from datetime import datetime
-import requests
+
 import pandas as pd
 import psycopg2
-
-
+import requests
 from analytics_toolkit.sql import SQLReader
 from psycopg2.extensions import AsIs
-import config
-from config import connect_to_db, Paths, URL, HEADERS
+
+
+from config import HEADERS, URL, Paths, Settings, connect_to_db
 
 output_data = []
 
@@ -22,6 +22,7 @@ class DataProcessor:
         self.filename = self.path.filename
         self.transformed_file = self.path.transformed_file
         self.sql = SQLReader()
+        self.settings = Settings()
 
     def extract_from_csv(self, file):
         # read the CSV file and select specific columns
